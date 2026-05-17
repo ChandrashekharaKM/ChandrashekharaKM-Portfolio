@@ -1,36 +1,50 @@
 import React from 'react';
 import './Projects.css';
-import { ExternalLink, Shield, MapPin, BarChart2, TrendingUp } from 'lucide-react';
+import { ExternalLink, Shield, MapPin, BarChart2, TrendingUp, Database, Code } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 const Projects = () => {
   const projectData = [
     {
-      title: 'NeighborCare',
-      description: 'A real-time emergency response network using React Native and Socket.io with geospatial tracking to connect users in critical situations.',
-      tech: ['React Native', 'Socket.io', 'Node.js', 'Geospatial API'],
-      icon: <MapPin size={32} />,
-      links: { github: '#', live: '#' }
-    },
-    {
       title: 'AnonDesk',
-      description: 'A secure anonymous feedback platform featuring SHA-256 encryption and RESTful APIs to ensure absolute data privacy and integrity.',
-      tech: ['Java', 'Spring Boot', 'SHA-256', 'REST APIs'],
+      description: 'Secure anonymous feedback platform using SHA-256 encryption to protect user identity and feedback text. Optimized database performance by 40% through table normalization and custom index tuning in MySQL. Developed stateless REST layer with custom exception handling for high-volume concurrent client payloads.',
+      tech: ['Java', 'MySQL', 'RESTful APIs', 'SHA-256'],
       icon: <Shield size={32} />,
       links: { github: '#', live: '#' }
     },
     {
       title: 'SentiMint AI',
-      description: 'A real-time sentiment analysis dashboard built with FastAPI and Hugging Face transformer models for processing high-volume text streams.',
-      tech: ['Python', 'FastAPI', 'Hugging Face', 'React'],
+      description: 'Real-time sentiment analysis dashboard using FastAPI microservices to ingest and parse streaming message frequencies. Integrated pre-trained Hugging Face transformer layers for deep semantic scoring and emotion tracking. Configured asynchronous execution blocks in Python to support low-latency concurrent sessions.',
+      tech: ['Python', 'FastAPI', 'Hugging Face', 'Transformers'],
       icon: <BarChart2 size={32} />,
       links: { github: '#', live: '#' }
     },
     {
-      title: 'AgriPriceAI',
-      description: 'A robust market forecasting system using Scikit-learn to analyze agricultural data and accurately predict vegetable prices over time.',
-      tech: ['Python', 'Scikit-learn', 'Pandas', 'Flask'],
+      title: 'NeighborCare',
+      description: 'Real-time emergency response network pairing active victims to verified local responders using geospatial mapping. Deployed Haversine formula calculation logic and Socket.io channels for low-latency proximity alert delivery. Engineered priority-matching sorting logic determining nearest responder arrays based on active GPS location streams.',
+      tech: ['React Native', 'Node.js', 'Socket.io', 'Express'],
+      icon: <MapPin size={32} />,
+      links: { github: '#', live: '#' }
+    },
+    {
+      title: 'NoteZone & Enterprise Apps',
+      description: 'Built NoteZone compilation infrastructure utilizing Java process runtime handlers to run user code strings securely. Architected multi-threaded request pool for concurrent sandbox execution isolation. Developed Water Quality Prediction system using Scikit-learn with 87% accuracy. Engineered AHAARIKA food ordering platform and Secure Online Voting engine with cryptographic ledger logic.',
+      tech: ['Spring Boot', 'Java', 'PHP', 'Scikit-learn'],
+      icon: <Code size={32} />,
+      links: { github: '#', live: '#' }
+    },
+    {
+      title: 'Water Quality Prediction',
+      description: 'Advanced ML system using Scikit-learn classification models to predict water safety with 87% evaluation accuracy. Implemented feature engineering pipelines to process environmental sensor data and quality indicators. Deployed predictive models for real-time water quality assessment and anomaly detection.',
+      tech: ['Python', 'Scikit-learn', 'Pandas', 'Machine Learning'],
       icon: <TrendingUp size={32} />,
+      links: { github: '#', live: '#' }
+    },
+    {
+      title: 'PlacementCell Portal',
+      description: 'Student placement tracking and management system built with PHP and normalized MySQL database design. Engineered secure authentication and role-based access control for students, companies, and administrators. Implemented milestone logging system to track student progress through placement pipeline with analytics dashboards.',
+      tech: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap'],
+      icon: <Database size={32} />,
       links: { github: '#', live: '#' }
     }
   ];
