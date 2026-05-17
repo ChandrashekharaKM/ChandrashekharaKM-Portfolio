@@ -44,7 +44,6 @@ const About = () => {
               <div className="profile-ring animate-float-ring">
                 <div className="profile-frame">
                   <img src={ProfileImage} alt="Chandrashekhara KM" onContextMenu={(e) => e.preventDefault()} />
-                  <div className="image-overlay">Do not download image</div>
                 </div>
               </div>
               <div className="profile-details">
