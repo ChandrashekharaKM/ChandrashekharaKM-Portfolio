@@ -27,13 +27,6 @@ const Projects = () => {
       links: { github: 'https://github.com/ChandrashekharaKM/SentiMint', live: '#' }
     },
     {
-      title: 'Water Quality Analysis',
-      description: 'Water safety prediction pipeline using Scikit-learn classification models. Built data processing workflows and real-time assessment logic to reach 87% accuracy on safety evaluation.',
-      tech: ['Python', 'Scikit-learn', 'Pandas', 'Machine Learning'],
-      icon: <TrendingUp size={32} />,
-      links: { github: 'https://github.com/ChandrashekharaKM/WaterQualityAnalysis', live: '#' }
-    },
-    {
       title: 'NoteZone',
       description: 'Java code compilation platform with secure sandbox runtime handlers. Architected a multi-threaded request pool to safely isolate concurrent code execution and dynamic compilation tasks.',
       tech: ['Java', 'Spring Boot', 'Java Compiler API'],
@@ -68,6 +61,13 @@ const Projects = () => {
         await navigator.share(shareData);
       } catch (error) {
         console.error('Share action canceled or failed:', error);
+      }
+    } else if (navigator.clipboard) {
+      try {
+        await navigator.clipboard.writeText(project.links.github);
+        window.alert('Project link copied to clipboard!');
+      } catch (error) {
+        window.prompt('Copy and share this project link:', project.links.github);
       }
     } else {
       window.prompt('Copy and share this project link:', project.links.github);
