@@ -1,0 +1,37 @@
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.cert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+  color: var(--accent-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.cert-details h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.cert-details p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
